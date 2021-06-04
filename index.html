@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <style>
+      #only-one {
+        color: gray;
+      }
+      #only-one.internally-styled {
+        color: violet;
+      }
+      ul, li.internally-styled {
+        color: blue;
+      }
+      .short {
+        color: blue;
+      }
+      .wide{
+        color: red;
+      }
+      .short.wide{
+        color: purple;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <ul>list name
+      <li style="color: red">item 1: inline, red</li>
+      <li class="internally-styled">item 2: internal, blue</li>
+      <li class="externally-styled">item 3: external, green</li>
+      <li style="color: pink" class="internally-styled">item 4: inline, internal, external</li>
+      <li id="only-one" class="internally-styled">item 4: inline, internal, external</li>
+      <li class="short">item short: multiple classes</li>
+      <li class="wide">item wide: multiple classes</li>
+      <li class="short wide">item short wide: multiple classes</li>
+    </ul>
+  </body>
+</html>
